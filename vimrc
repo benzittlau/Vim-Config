@@ -38,6 +38,9 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
+
+let g:CSApprox_loaded = 1
+
 "add some line space for easy reading
 set linespace=4
 
@@ -175,10 +178,11 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set autoindent
+set expandtab
 
 "folding settings
 set foldmethod=indent   "fold based on indent

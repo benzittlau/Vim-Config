@@ -1,6 +1,9 @@
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
+"Get rid of annoying CSApprox error message when gui not available
+let g:CSApprox_verbose_level = 0
+
 "load pathogen managed plugins
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
@@ -366,3 +369,12 @@ let g:user_zen_settings = {
   \  },
  \}
 
+if !has("gui_running")
+  "set railscasts colorscheme when running vim in gnome terminal
+  if $COLORTERM == 'gnome-terminal'
+      set term=gnome-256color
+      colorscheme railscasts
+  else
+      colorscheme default
+  endif
+endif

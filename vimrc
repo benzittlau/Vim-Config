@@ -15,6 +15,9 @@ set nocompatible
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+"automatically load the file if it had changed outside of vim
+set autoread
+
 "store lots of :cmdline history
 set history=1000
 

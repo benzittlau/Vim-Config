@@ -55,7 +55,8 @@
 "    information about using the taglist plugin.
 "
 " ****************** Do not modify after this line ************************
-
+"
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " Line continuation used here
 let s:cpo_save = &cpo
 set cpo&vim

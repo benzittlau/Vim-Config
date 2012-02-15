@@ -35,15 +35,8 @@ set wrap linebreak nolist
 "of just numbered lines
 vmap <D-j> gj
 vmap <D-k> gk
-vmap <D-4> g$
-vmap <D-6> g^
-vmap <D-0> g^
 nmap <D-j> gj
 nmap <D-k> gk
-nmap <D-4> g$
-nmap <D-6> g^
-nmap <D-0> g^
-
 
 let g:CSApprox_loaded = 1
 
@@ -52,11 +45,6 @@ set linespace=4
 
 "disable visual bell
 set visualbell t_vb=
-
-"try to make possible to navigate within lines of wrapped lines
-nmap <Down> gj
-nmap <Up> gk
-set fo=l
 
 "statusline setup
 set statusline=%f       "tail of the filename

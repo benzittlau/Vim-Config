@@ -226,15 +226,11 @@ let g:CommandTMatchWindowAtTop=1
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 " nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
-"make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
+"make <c-p> clear the highlight 
+nnoremap <C-P> :nohls<CR>
 
 "map to bufexplorer
-nnoremap <leader>b :BufExplorer<cr>
-
-"map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
+nnoremap <D-B> :BufExplorer<cr>
 
 "map Q to something useful
 noremap Q gq
@@ -242,13 +238,10 @@ noremap Q gq
 "make Y consistent with C and D
 nnoremap Y y$
 
-"bindings for ragtag
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
-
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
+"automatically close the location list when all errors are fixed
+let g:syntastic_auto_loc_list=2
 
 "key mapping for vimgrep result navigation
 map <A-o> :copen<CR>
@@ -328,37 +321,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"key mapping for saving file
-nmap <C-s> :w<CR>
-
-"key mapping for tab navigation
-nmap <Tab> gt
-nmap <S-Tab> gT
-
-"Key mapping for textmate-like indentation
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
-
-"Enabling Zencoding
-let g:user_zen_settings = {
-  \  'php' : {
-  \    'extends' : 'html',
-  \    'filters' : 'c',
-  \  },
-  \  'xml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'haml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'erb' : {
-  \    'extends' : 'html',
-  \  },
- \}
 
 if !has("gui_running")
   "set railscasts colorscheme when running vim in gnome terminal

@@ -25,10 +25,6 @@ if has("gui_mac") || has("gui_macvim")
     map <D-t> :CommandT<CR>
     " make Mac's Option key behave as the Meta key
     set invmmta
-    try
-      set transparency=5
-    catch
-    endtry
 endif
 
 if has("gui_win32") || has("gui_win32s")

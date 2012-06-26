@@ -5,8 +5,8 @@ filetype off
 let g:CSApprox_verbose_level = 0
 
 "load pathogen managed plugins
-call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.

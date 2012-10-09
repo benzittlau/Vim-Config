@@ -40,6 +40,11 @@ nmap <D-k> gk
 
 let g:CSApprox_loaded = 1
 
+
+"vim-indent-guides options
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 4
+
 "add some line space for easy reading
 set linespace=4
 
@@ -178,6 +183,16 @@ set tabstop=2
 set autoindent
 set expandtab
 
+command! -nargs=? Tabs call s:SetTabWidth('<args>')
+function! s:SetTabWidth(width)
+    let tabsize = a:width
+    execute "set tabstop=".tabsize
+    execute "set shiftwidth=".tabsize
+    execute "set softtabstop=".tabsize
+    IndentGuidesDisable
+    IndentGuidesEnable
+endfunction
+
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
@@ -214,9 +229,12 @@ set ttymouse=xterm2
 set hidden
 
 "Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
+"let g:CommandTMaxHeight=10
+"let g:CommandTMatchWindowAtTop=1
 
+"ctrlp configuration
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
 
 
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something

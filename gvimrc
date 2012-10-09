@@ -22,7 +22,7 @@ if has("gui_mac") || has("gui_macvim")
     " key binding for Command-T to behave properly
     " uncomment to replace the Mac Command-T key to Command-T plugin
     macmenu &File.New\ Tab key=<nop>
-    map <D-t> :CommandT<CR>
+    map <D-t> :CtrlP<CR>
     " make Mac's Option key behave as the Meta key
     set invmmta
 endif

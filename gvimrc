@@ -5,7 +5,6 @@ map <D-t> :CommandT<CR>
 "tell the term has 256 colors
 set t_Co=256
 
-colorscheme vividchalk
 set guitablabel=%M%t
 set lines=40
 set columns=115
@@ -31,3 +30,6 @@ if has("gui_win32") || has("gui_win32s")
     set guifont=Consolas:h12
     set enc=utf-8
 endif
+
+" Autosave any modified buffers when focus is lost
+autocmd BufLeave,FocusLost * silent! wall

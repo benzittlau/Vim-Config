@@ -1,3 +1,6 @@
+" Set the map leader to the spacebar
+let mapleader = " "
+
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
@@ -30,6 +33,9 @@ set hlsearch    "hilight searches by default
 set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
+
+"mapping to exit using 'jj'
+imap jj <Esc>
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
@@ -242,6 +248,8 @@ let g:ctrlp_match_window_reversed = 0
 " nmap <silent> <Leader>q <Plug>PeepOpen
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+silent! nmap <silent> <Leader>l :TlistToggle<CR>
+silent! nnoremap <leader>t :CtrlP<CR>
 " nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
 "make <c-p> clear the highlight 
@@ -341,12 +349,14 @@ map <C-l> <C-w>l
 
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
-if !has("gui_running")
+"if !has("gui_running")
   "set railscasts colorscheme when running vim in gnome terminal
-  if $COLORTERM == 'gnome-terminal'
-      set term=gnome-256color
-      colorscheme railscasts
-  else
-      colorscheme default
-  endif
-endif
+  "if $COLORTERM == 'gnome-terminal'
+  "    set term=gnome-256color
+  "    colorscheme railscasts
+  "else
+  "    colorscheme default
+  "endif
+"endif
+
+colorscheme vividchalk

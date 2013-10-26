@@ -26,6 +26,9 @@ else
     let s:molokai_original = 0
 endif
 
+hi IndentGuidesOdd ctermbg=233
+hi IndentGuidesOdd ctermbg=234
+
 
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74

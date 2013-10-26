@@ -99,7 +99,7 @@ endfunction
 " gVim when colors can't be automatically calculated.
 "
 function! indent_guides#basic_highlight_colors()
-  let l:cterm_colors = (&g:background == 'dark') ? ['darkgrey', 'black'] : ['lightgrey', 'white']
+  let l:cterm_colors = (&g:background == 'dark') ? ['234', '235'] : ['lightgrey', 'white']
   let l:gui_colors   = (&g:background == 'dark') ? ['grey15', 'grey30']  : ['grey70', 'grey85']
 
   exe 'hi IndentGuidesEven guibg=' . l:gui_colors[0] . ' ctermbg=' . l:cterm_colors[0]
